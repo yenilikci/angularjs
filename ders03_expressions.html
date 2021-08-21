@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./node_modules/angular/angular.js"></script>
+    <title>Document</title>
+  </head>
+  <!-- ng-app bir tane olabilir, angular kodları onun dışında yazılamaz-->
+  <body ng-app="">
+    <!-- ng-init değer verilmesini sağlar -->
+    <div ng-init="isim='melih'">
+      <p>{{isim}}</p>
+      <!-- melih -->
+
+      <p ng-bind="isim"></p>
+      <!-- melih -->
+
+      <p ng-bind="isim">İsim:</p>
+      <!-- variable -->
+
+      <p>İsim: {{isim}}</p>
+      <!-- string + variable -->
+
+      <p>{{5*9}}</p>
+      <!-- {{}}} içerisinde js kodu yürütebildik -->
+
+      <div ng-init="a=5; b=6">
+        <p>{{a*b}}</p>
+        <!-- 30 -->
+      </div>
+
+      <div ng-init="A='melih'; B='celik'">
+        <p>{{A+ ' ' + B}}</p>
+        <!-- melih celik -->
+      </div>
+
+      <div ng-init="x='melo'; y='celo'">
+        <p ng-bind="x+' '+ y"></p>
+        <!-- melo celo -->
+      </div>
+
+      <div ng-init="kisi={isim:'melih',soyisim:'celik'}">
+        <p ng-bind="kisi.isim"></p>
+        <!-- melih -->
+        <p ng-bind="kisi.soyisim"></p>
+        <!-- celik -->
+        <p>{{kisi.isim}}</p>
+        <!-- melih -->
+        <p>{{kisi.isim + ' ' + kisi.soyisim}}</p>
+      </div>
+
+      <div ng-init="sayilar=[1,2,3,4,5]">
+        <p>{{sayilar[1]}}</p>
+        <!-- 2 -->
+      </div>
+
+      <div ng-init="renk='red'">
+        <p style="background-color: {{renk}}" ng-model="renk">paragraf</p>
+      </div>
+    </div>
+  </body>
+</html>
