@@ -11,13 +11,10 @@
     {{name + ' ' + surname}}
 </p>
 
-<script>
-    var app = angular.module("myApp", []);
-    app.controller("myControl", function ($scope) {
-        $scope.name = "Melih";
-        $scope.surname = "Çelik";
-    });
-</script>
+<p ng-controller="secondControl">{{age}}</p>
+
+<script src="./module.js"></script>
+<script src="./controller.js"></script>
 
 </body>
 </html>
