@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<ul>
+    <li ng-repeat="x in names">{{x}}</li>
+</ul>
+
+<ul>
+    <li ng-repeat="x in people">{{x.name + ' isimli kullanıcı ' + x.language + ' dilini programlıyor'}}</li>
+</ul>
+
+<script>
+
+    var app = angular.module("myApp", []);
+    app.controller("myControl", function ($scope) {
+        $scope.names = ["HTML", "CSS", "JS", "ANGULARJS"];
+        $scope.people = [{name: 'Melih', language: 'Js'}, {name: 'Zeynep', language: 'Py'}];
+    });
+
+</script>
+
+</body>
+</html>
