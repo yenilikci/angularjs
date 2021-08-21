@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<p ng-non-bindable>{{5 * 5}}</p>
+<p>{{5 * 5}}</p>
+<p ng-non-bindable>{{name}}</p>
+<p>{{name}}</p>
+
+<script>
+
+    var app = angular.module("myApp", []);
+    app.controller("myControl", function ($scope) {
+        $scope.name = "Melih";
+    });
+
+</script>
+
+</body>
+</html>
