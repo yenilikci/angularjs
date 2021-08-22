@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<p ng-show="true">Angular JS</p>
+<p ng-show="false">Angular JS</p>
+<p ng-show="10==15">Angular JS</p>
+<p ng-show="10!=15">Angular JS</p>
+
+<p ng-hide="10!=15">Angular JS</p>
+
+<!-- <input type="text" placeholder="k adi.." ng-model="username"> -->
+<p ng-hide="username">Kullanıcı adı boş bırakılamaz</p>
+<p ng-hide="{{username}}">Kullanıcı adı boş bırakılamaz</p>
+<!-- ng-hide="{{variable}}" -->
+
+<script src="./script.js"/>
+
+</body>
+</html>
