@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<input type="checkbox" ng-checked="true">
+<input type="checkbox" ng-checked="false"> <!-- default -->
+
+<input type="checkbox" ng-checked="test">
+<br> <br>
+
+<input type="checkbox" ng-model="test2"><br>
+<p ng-show="test2">Check edildi</p>
+html: <input type="checkbox" ng-checked="test2"><br>
+css: <input type="checkbox" ng-checked="test2"><br>
+js: <input type="checkbox" ng-checked="test2"><br>
+
+<script src="./script.js"/>
+
+</body>
+</html>
