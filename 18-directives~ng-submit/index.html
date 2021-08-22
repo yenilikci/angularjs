@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<form ng-submit="changeMessage()">
+    <input type="text" placeholder="mesajınız...">
+    <input type="submit"/>
+</form>
+
+<p>{{message}}</p>
+
+<script src="./script.js"/>
+
+</body>
+</html>
