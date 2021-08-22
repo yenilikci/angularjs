@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+durum1: <span ng-if="true">Angular JS öğreniyorum</span> <br>
+durum2: <span ng-if="false">Angular JS öğreniyorum</span> <br>
+durum3: <span ng-if="10>5">Angular JS öğreniyorum</span> <br>
+durum4: <span ng-if="10<5">Angular JS öğreniyorum</span> <br>
+durum5: <span ng-if="10!=5">Angular JS öğreniyorum</span> <br>
+
+<!-- ör uygulama -->
+<input type="text" ng-model="username" placeholder="enter username"/>
+<p ng-if="!username">username cannot be blank</p>
+
+<script src="./script.js"/>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<ul>
+    <li ng-repeat="x in names">{{x}}</li>
+</ul>
+
+<ul>
+    <li ng-repeat="x in people">{{x.name + ' isimli kullanıcı ' + x.language + ' dilini programlıyor'}}</li>
+</ul>
+
+<script src="./script.js"/>
+
+</body>
+</html>

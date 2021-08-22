@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<input type="number" ng-model="firstNumber"> <br/> <br/>
+<input type="number" ng-model="secondNumber">
+<p>{{firstNumber * secondNumber}}</p>
+<!-- two way binding -->
+
+<input type="text" ng-model="name"> <br/> <br/>
+<input type="text" ng-model="surname">
+<p ng-bind="'Merhaba ' + name + ' ' + surname"></p>
+<p>Merhaba {{name + ' ' + surname}}</p>
+<!-- two way binding -->
+
+<script src="./script.js"/>
+
+</body>
+</html>
