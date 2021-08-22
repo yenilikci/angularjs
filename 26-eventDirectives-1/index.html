@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<h1 ng-mouseenter="firstFunction()" ng-mouseleave="secondFunction()"
+    ng-style="{'background-color':bColor,'color':tColor}">AngularJS</h1>
+<hr>
+<br><br>
+<h1 ng-mousemove="count=count+1">Mouse Move</h1>
+<h1 ng-mouseenter="countSecond=countSecond+1">Mouse Enter</h1>
+<h1 ng-mouseleave="countThird=countThird+1">Mouse Leave</h1>
+<h1 ng-mousedown="countFourth=countFourth+1">Mouse Down</h1>
+<h1 ng-mouseup="countFifth=countFifth+1">Mouse Up</h1>
+<h1 ng-mouseover="countSixth=countSixth+1">Mouse Over</h1>
+
+<p>Mouse Move: {{count}}</p>
+<p>Mouse Enter: {{countSecond}}</p>
+<p>Mouse Leave: {{countThird}}</p>
+<p>Mouse Down: {{countFourth}}</p>
+<p>Mouse Up: {{countFifth}}</p>
+<p>Mouse Over: {{countSixth}}</p>
+
+<script src="./script.js"/>
+
+</body>
+</html>
