@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<label>
+    <input type="radio" ng-model="test" value="en"> İngilizc
+</label>
+<label>
+    <input type="radio" ng-model="test" value="es"> İspanyolca
+</label>
+<label>
+    <input type="radio" ng-model="test" value="fr"> Fransızca
+</label>
+
+<div ng-switch="test">
+    <div ng-switch-when="en">
+        <p>Welcome</p>
+    </div>
+    <div ng-switch-when="es">
+        <p>Bienvenidos</p>
+    </div>
+    <div ng-switch-when="fr">
+        <p>Bienvenue</p>
+    </div>
+</div>
+
+<script src="./script.js"/>
+
+</body>
+</html>
