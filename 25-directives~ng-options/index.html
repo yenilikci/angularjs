@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<select ng-model="test" ng-options="x for x in languages"></select>
+<p>{{test}}</p>
+
+<select ng-model="test2" ng-options="x.name for x in peoples"></select>
+<p>{{test2.name}}</p>
+<p>{{test2.language}}</p>
+
+<select ng-model="test3" ng-options="x for (x,y) in list"></select>
+    
+<script src="./script.js"/>
+
+</body>
+</html>
