@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            min-width: 75px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<table>
+    <thead>
+    <tr>
+        <th>Sıra No:</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="x in kisiler">
+        <td>{{$index + 1}}</td>
+        <td>{{x.ad}}</td>
+        <td>{{x.soyad}}</td>
+        <td>{{x.sehir}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<script src="./script.js"/>
+
+</body>
+</html>
