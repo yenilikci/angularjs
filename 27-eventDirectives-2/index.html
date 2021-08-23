@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+<input type="text" ng-keypress="firstFunction()"/>
+<input type="text" ng-keydown="secondFunction()"/>
+<input type="text" ng-keyup="thirdFunction()"/>
+
+<p ng-show="test">Tıklandı</p>
+<p ng-show="test2">Tıklandı</p>
+<p ng-show="test3">Tıklandı</p>
+
+<button ng-click="fourthFunction()">Tıkla</button>
+<div style="width: 500px; height: 500px;" ng-style="{'background-image':goruntu}"></div>
+
+<button ng-dblclick="fifthFunction()">Tıkla</button>
+<div ng-show="gg">
+    <ul>
+        <li>html</li>
+        <li>css</li>
+        <li>js</li>
+        <li>jquery</li>
+        <li>angular</li>
+    </ul>
+</div>
+
+<script src="./script.js"/>
+
+</body>
+</html>
