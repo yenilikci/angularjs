@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myControl">
+    <p>{{value | uppercase}}</p>
+    <p>{{value | lowercase}}</p>
+
+    <p>{{cur | currency }}</p>
+    <p>{{cur | currency: "€"}}</p>
+    <p>{{cur | currency: "€" : 1}}</p>
+
+    <pre>{{jValue | json}}</pre>
+
+    <p>{{number | number}}</p>
+
+    <p>{{date | date}}</p>
+
+    <p>{{lmValue | limitTo:3}}</p>
+    <!-- Çel -->
+    <p>{{lmValue | limitTo:3:1}}</p>
+    <!-- eli -->
+    <p>{{lmValue | limitTo:3:-2}}</p>
+    <!-- ik -->
+    <p>{{array | limitTo:2}}</p>
+    <!-- ["react","vue"] -->
+    <script src="./script.js" />
+  </body>
+</html>
