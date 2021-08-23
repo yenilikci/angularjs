@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+    <style>
+      input.ng-invalid {
+        outline: 2px solid red;
+      }
+
+      input.ng-valid {
+        outline: 2px solid green;
+      }
+      /*
+      input.ng-valid-required {
+        outline: 2px solid blue;
+      }
+      */
+      input.ng-invalid-email {
+        outline: 2px solid blue;
+      }
+      input.ng-touched {
+        outline: 2px solid yellow;
+      }
+      input.ng-untouched {
+        outline: 2px solid gray;
+      }
+      #frm.ng-submitted {
+        border: 2px solid brown;
+      }
+    </style>
+  </head>
+  <body ng-app="myApp" ng-controller="myControl">
+    <form name="frm" id="frm">
+      <input type="email" name="username" ng-model="username" required />
+      <input type="number" name="num" ng-model="num" />
+      <input type="submit" />
+    </form>
+
+    <p ng-show="frm.username.$error.email">Geçersiz email adresi</p>
+
+    <p ng-show="frm.num.$error.number">Geçersiz sayı</p>
+    <p ng-show="frm.num.$error.required">Geçersiz</p>
+
+    <p ng-show="frm.$submitted">Kayıt Gönderildi</p>
+
+    <h4>Valid: {{frm.username.$valid}}</h4>
+    <h4>Invalid: {{frm.username.$invalid}}</h4>
+    <h4>Touched: {{frm.username.$touched}}</h4>
+    <h4>Untouched: {{frm.username.$untouched}}</h4>
+    <h4>Dirty: {{frm.username.$dirty}}</h4>
+    <h4>Pristine: {{frm.username.$pristine}}</h4>
+
+    <script src="./script.js" />
+  </body>
+</html>
