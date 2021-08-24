@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.min.js"></script>
+  </head>
+  <body ng-app="myApp">
+    <p><a href="#/!">Anasayfa</a></p>
+    <p><a href="#!blue">Mavi Sayfa</a></p>
+    <p><a href="#!red">Kırmızı Sayfa</a></p>
+    <p><a href="#!green">Yeşil Sayfa</a></p>
+
+    <div ng-view></div>
+    <script src="./script.js" />
+  </body>
+</html>
